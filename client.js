@@ -79,3 +79,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     renderCards();
   });
+
+
+  $("#replay").click(function() {
+    var el = $(".text-pop-up-top"),
+      newone = el.clone(true);
+  
+    el.before(newone);
+  
+    $("." + el.attr("class") + ":last").remove();
+  });
+  
